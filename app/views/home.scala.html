@@ -1,0 +1,34 @@
+@()
+<html>
+<header>
+    <link rel="stylesheet" href='@routes.Assets.at("stylesheets/stylesheet.css")' />
+</header>
+
+<body>
+<div id="siteheader">
+    tonysworld-frontend!
+</div>
+
+<div id="nav">
+    <ul>
+        <li>navigation item 1</li>
+        <li>navigation item 2</li>
+        <li>navigation item 3</li>
+    </ul>
+</div>
+
+<div class="section">
+
+    <p class="textlarge">Sections to complete</p>
+    <p class="textmedium">
+        To change your personal details.
+        <a href="Continue"></a>
+        <a id="Continue" href='@controllers.routes.CompletePersonalDetails.present()'>Complete personal details</a>
+    </p>
+
+</div>
+<div id="footer">
+    Copyright © tonymyers
+</div>
+</body>
+</html>

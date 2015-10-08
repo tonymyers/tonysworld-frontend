@@ -1,0 +1,58 @@
+@import play.api.data._
+@import helper._
+@import models.PersonalDetails
+@import forms._
+@import models._
+@import play.api.i18n.Messages._
+@import play.api.i18n.Messages.Implicits._
+@import play.api.Play.current
+
+@(personalDetails: PersonalDetails)
+<html>
+<head>
+    <link rel="stylesheet" href='@routes.Assets.at("stylesheets/stylesheet.css")' />
+</head>
+
+<body>
+<div id="siteheader">
+    tonysworld-frontend!
+</div>
+<div id="nav">
+    <ul>
+        <li>navigation item 1</li>
+        <li>navigation item 2</li>
+        <li>navigation item 3</li>
+    </ul>
+</div>
+
+<div class="section">
+    <p class="textextralarge">@Messages("completepersonaldetails.sectiontitle")</p>
+
+    <p class="textlarge">Sections to complete</p>
+    <table>
+        <thead>
+            <th>@Messages("personaldetailssummary.head.labeltitle")</th>
+            <th>@Messages("personaldetailssummary.head.labeldata")</th>
+        </thead>
+        <tbody>
+            <tr class="textmedium" style="border: 10px solid black">
+                <td>@Messages("completepersonaldetails.label.firstname")</td>
+                <td>@personalDetails.firstName</td>
+            </tr>
+            <tr>
+                <td>@Messages("completepersonaldetails.label.lastname")</td>
+                <td>@personalDetails.lastName</td>
+            </tr>
+            <tr>
+                <td>@Messages("completepersonaldetails.label.dob")</td>
+                <td>@personalDetails.DOB</td>
+            </tr>
+        </tbody>
+        </table>
+    <p><a id="back-link" href="@controllers.routes.CompletePersonalDetails.present()">Back</a></p>
+</div>
+<div id="footer">
+    Copyright © tonymyers
+</div>
+</body>
+</html>

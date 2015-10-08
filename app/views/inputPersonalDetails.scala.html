@@ -1,0 +1,53 @@
+@import play.api.data.Forms._
+@import play.api.data._
+@import helper._
+@import play.api.i18n.Messages._
+@import play.api.i18n.Messages.Implicits._
+@import play.api.Play.current
+
+
+@(personalDetailsForm: Form[PersonalDetails])
+<html>
+<head>
+    <link rel="stylesheet" href='@routes.Assets.at("stylesheets/stylesheet.css")' />
+</head>
+<body>
+<div id="siteheader">
+    tonysworld-frontend!
+</div>
+
+<div id="nav">
+    <ul>
+        <li>navigation item 1</li>
+        <li>navigation item 2</li>
+        <li>navigation item 3</li>
+    </ul>
+</div>
+
+<div class="section">
+    <p class="textextralarge">@Messages("completepersonaldetails.sectiontitle")</p>
+
+    <p class="textlarge">@Messages("completepersonaldetails.formheader")</p>
+
+    <P class="textmedium">@helper.form(action = controllers.routes.CompletePersonalDetails.submitPersonalDetails){
+
+        @helper.inputText(personalDetailsForm("firstName"), '_class -> "form-group", '_labelTextClass -> "form-label", '_label -> Messages("completepersonaldetails.label.firstname"))
+
+        @helper.inputText(personalDetailsForm("lastName"), '_class -> "form-group noBottomMarginLastName", '_labelTextClass -> "form-label", '_label -> Messages("completepersonaldetails.label.lastname"))
+
+        @helper.inputText(personalDetailsForm("DOB.day"), '_class -> "form-group dateFormat dateFirstBox", '_labelTextClass -> "form-label", '_label -> Messages("completepersonaldetails.label.dob"), '_inputClass -> "form-control")
+        @helper.inputText(personalDetailsForm("DOB.month"), '_class -> "form-group dateFormat", '_labelTextClass -> "form-label", '_label -> "", '_inputClass -> "form-control"))
+        @helper.inputText(personalDetailsForm("DOB.year"), '_class -> "form-group dateFormat", '_labelTextClass -> "form-label", '_label -> "", '_inputClass -> "form-control"))
+    </p>
+    <p>
+        <button type="submit" id="submit" class="button">Submit</button></p>
+    }
+    </P>
+
+    <p><a id="back-link" href="@controllers.routes.Home.present()">Back</a></p>
+</div>
+<div id="footer">
+    Copyright © tonymyers
+</div>
+</body>
+</html>

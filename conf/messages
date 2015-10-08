@@ -1,0 +1,16 @@
+#Personal Details pages
+completepersonaldetails.sectiontitle=Personal details section
+
+completepersonaldetails.formheader=Complete your personal detsils
+completepersonaldetails.label.firstname=First name
+completepersonaldetails.label.lastname=Last name
+completepersonaldetails.label.dob=Date of Birth
+completepersonaldetails.firstname=First Name is mandatory
+completepersonaldetails.lastname=Last Name is mandatory
+completepersonaldetails.dob.day=The day is mandatory
+completepersonaldetails.dob.month=The month is mandatory
+completepersonaldetails.dob.year=The year is mandatory
+completepersonaldetails.dob=You have not entered a valid date
+
+personaldetailssummary.head.labeltitle=Name of the field
+personaldetailssummary.head.labeldata=Data provided

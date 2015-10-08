@@ -1,0 +1,114 @@
+#siteheader {
+    background-color:#999999;
+    color:black;
+    text-align:center;
+    padding:5px;
+    font-size: 35px;
+    font-weight: bold;
+}
+#nav {
+    width:100%;
+    height:40px;
+    font-size: 18px;
+    margin: 0;
+    padding:0px;
+    overflow: hidden;
+    line-height:20px;
+    background-color:#E9E9E9;
+    text-align: left;
+}
+#nav ul{
+    height: auto;
+    padding: 8px 10px;
+    margin: 0px;
+}
+
+#nav ul li {
+    /* This allow us to arrange list items in a row, without using float */
+    display: inline-block;
+    list-style-type: none;
+}
+
+#footer {
+    background-color:C3C3C3;
+    color:white;
+    clear:both;
+    text-align:center;
+    padding:5px;
+    width:100%
+}
+
+.section {
+    width:100%;
+    float:left;
+    padding:10px;
+    border-style: solid;
+    border-width: 1px;
+}
+
+.section .textextralarge {
+    font-size: 40px;
+}
+
+.section .textlarge {
+    font-size: 25px;
+}
+
+.section .textmedium {
+    font-size: 18px;
+}
+
+dt, dt, dd {
+    display: inline-block;
+}
+
+dd.error {
+    color: rgb(255, 0, 0);
+}
+
+.error input {
+    border: 1px solid red;
+}
+#all date stuff
+.dateFirstBox label {
+    margin-right: 1.6em
+}
+
+.dateFormat dd {
+    -webkit-margin-start: 0px;
+}
+
+.dateFormat {
+     display: inline-block;
+     margin-right:0.5em;
+}
+
+.dateFormat input {
+     width: 3.5em;
+}
+
+.dateFormat .info {
+    display: none;
+}
+
+.dateFormat:not(:last-of-type) dd.error {
+    display: none;
+}
+
+.noBottomMarginLastName {
+    -webkit-margin-after: 0;
+}
+#End of date stuff
+
+.table {
+    width: 100%;
+}
+.table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+    width: 10em;
+}
+
+.table ,th, td {
+    padding: 0.5em;
+}
